@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yalw"
+version = "0.1.0"
+description = "Yet Another Live Widget: floating now-playing and Bluetooth cards for any Linux desktop"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["PySide6>=6.6", "dbus-fast>=2.0"]
+classifiers = ["Operating System :: POSIX :: Linux", "Environment :: X11 Applications :: Qt"]
+
+[project.optional-dependencies]
+lyrics = ["PyYAML>=6"]
+
+[project.scripts]
+yalw = "yalw.__main__:main"
+
+[tool.setuptools]
+packages = ["yalw", "yalw.builtin"]
+
+[tool.setuptools.package-data]
+yalw = ["qml/*.qml", "assets/*.svg", "assets/lucide/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

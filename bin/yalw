@@ -1,0 +1,3 @@
+#!/bin/sh
+# Launcher: runs YALW straight from this checkout.
+cd "$(dirname "$(readlink -f "$0")")/.." && exec python3 -m yalw "$@"
