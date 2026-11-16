@@ -47,7 +47,7 @@ You need Linux, Python ≥ 3.11 and a user session with D-Bus. `bluez` (Bluetoot
 optional. The installer needs no root:
 
 ```bash
-git clone <this repository> && cd yalw
+git clone https://github.com/akasperanza/yalw && cd yalw
 ./install.sh                # install or update (no start-at-login: ./install.sh --no-service)
 ```
 
